@@ -1,0 +1,3 @@
+creation_rules:
+  - path_regex: ^mitamae/encrypted/.*\.ya?ml$
+    age: ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAICiV5qWQDWvNKd28bXq6Wl99Sld/lFzd6AqswpdumrMj

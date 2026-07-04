@@ -1,0 +1,17 @@
+#!/bin/sh
+set -eu
+
+log() {
+  printf '%s\n' "$*"
+}
+
+cd /opt/management
+log "running mitamae first boot role"
+/usr/local/bin/mitamae local \
+  --node-yaml=/opt/management/mitamae/nodes.yml \
+  --node-yaml=/opt/management/mitamae/secrets/secrets.yml \
+  /opt/management/mitamae/roles/default.rb
+
+log "disabling mitamae first boot service"
+systemctl disable mitamae-firstboot.service
+rm -f /etc/systemd/system/multi-user.target.wants/mitamae-firstboot.service

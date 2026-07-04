@@ -1,0 +1,2 @@
+PARTUUID=@BOOT_PARTUUID@  /boot  vfat  rw,noatime,fmask=0022,dmask=0022  0  0
+PARTUUID=@ROOT_PARTUUID@  /      f2fs  @ROOT_F2FS_OPTIONS@  0  0

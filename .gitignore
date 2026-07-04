@@ -1,0 +1,37 @@
+# Plaintext secrets. Keep encrypted material under mitamae/encrypted/ instead.
+/mitamae/secrets/*
+!/mitamae/secrets/
+!/mitamae/secrets/secrets.yml
+/mitamae/nodes.local.yml
+/mitamae/files/authorized_keys.local
+/.sops.local.yaml
+
+# Downloaded rootfs archives and generated card images.
+*.img
+*.img.xz
+*.iso
+*.tar
+*.tar.gz
+*.tgz
+*.txz
+*.zip
+ArchLinuxARM-*.tar.gz
+
+# Temporary mount/work directories.
+/mnt/
+/mount/
+/tmp/
+/work/
+/sdcard/work/
+/sdcard/tmp/
+
+# Local editor and OS files.
+.DS_Store
+Thumbs.db
+*~
+*.swp
+*.swo
+
+# Local backups from exploratory edits.
+*.bak
+*.bak[0-9]

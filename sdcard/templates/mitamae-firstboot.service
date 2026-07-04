@@ -1,0 +1,12 @@
+[Unit]
+Description=初回起動時に mitamae を実行
+Wants=network-online.target
+After=network-online.target
+
+[Service]
+Type=oneshot
+ExecStart=/usr/local/sbin/mitamae-firstboot
+RemainAfterExit=yes
+
+[Install]
+WantedBy=multi-user.target
